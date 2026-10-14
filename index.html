@@ -1,0 +1,52 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ÓticaZap (nome provisório) — pedidos, carnê e Pix pelo WhatsApp</title>
+<meta name="description" content="Para óticas independentes: foto da ficha, status pelo WhatsApp, carnê com Pix e lembretes de receita.">
+<!-- NOTE: "ÓticaZap" is a neutral PLACEHOLDER brand; not checked at INPI. -->
+<style>
+body{margin:0;font-family:system-ui,sans-serif;color:#1e293b;line-height:1.5}main>section{padding:48px 20px;max-width:960px;margin:auto}
+.hero{background:#0f766e;color:#fff}.hero section{padding:56px 20px;max-width:960px;margin:auto}h1{font-size:2rem;margin:0 0 12px}
+.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}.card{border:1px solid #e2e8f0;border-radius:16px;padding:18px}
+.btn{display:inline-block;background:#f59e0b;color:#111;padding:12px 20px;border-radius:12px;text-decoration:none;font-weight:600;border:0;font-size:1rem;cursor:pointer}
+form{background:#f8fafc;border-radius:16px;padding:20px;display:grid;gap:12px;max-width:520px}label{font-size:.9rem;font-weight:600}input,select{width:100%;padding:10px;border:1px solid #cbd5e1;border-radius:10px;box-sizing:border-box;font-size:1rem}
+.pb{background:#fef2f2}.small{font-size:.85rem;color:#64748b}footer{background:#0f172a;color:#cbd5e1;padding:24px;text-align:center}footer a{color:#fff}
+</style></head><body>
+<div class="hero"><section><h1>Sua ótica sem ficha perdida, sem “já ficou pronto?” e sem carnê esquecido.</h1>
+<p>Fotografe a ficha de pedido em papel. O cliente acompanha o status e recebe “seus óculos estão prontos” no WhatsApp. Parcelas do carnê com Pix e Pix Automático, com lembretes automáticos.</p>
+<a class="btn" href="#piloto" onclick="track('cta-hero')">Quero participar do piloto</a> &nbsp; <a href="/app-demo/" style="color:#fff">Ver protótipo →</a></section></div>
+<main>
+<section class="pb"><h2>O problema</h2><div class="grid">
+<div class="card">📞 Clientes ligando e mandando mensagem o dia todo: “meus óculos já ficaram prontos?”</div>
+<div class="card">📒 Carnê no papel: parcela atrasada que ninguém cobrou, e cobrar dá vergonha.</div>
+<div class="card">💸 Sistemas caros, com contrato de 12 meses, taxa de ativação e multa para cancelar.</div>
+<div class="card">🔁 Cliente com receita vencida que nunca mais voltou à loja.</div></div></section>
+<section><h2>A solução</h2><div class="grid">
+<div class="card"><b>📷 Foto da ficha</b><br>Tire uma foto da ficha de pedido. O sistema preenche cliente, lente, laboratório e valor — você só confere.</div>
+<div class="card"><b>✅ Status no WhatsApp</b><br>Recebido → no laboratório → pronto. O cliente recebe “seus óculos estão prontos” no WhatsApp da ótica.</div>
+<div class="card"><b>🧾 Carnê com Pix</b><br>Parcelas com link Pix, Pix Automático e lembretes antes e depois do vencimento. Recibo no WhatsApp.</div>
+<div class="card"><b>👓 Lembrete de receita</b><br>Com autorização do cliente, avisamos quando é hora de um novo exame — e ele volta para a sua ótica.</div></div></section>
+<section><h2>Piloto para óticas independentes (1–2 lojas)</h2><p><b>Cerca de R$ 119/mês</b> no piloto, sem contrato de fidelidade e sem taxa de implantação. Vagas limitadas no Rio de Janeiro.</p><p class="small">Valor de referência para o piloto; condições finais serão combinadas antes de qualquer cobrança.</p></section>
+<section id="piloto"><h2>Quero participar do piloto</h2>
+<form id="pilotForm" novalidate>
+<div><label for="nome">Seu nome</label><input id="nome" name="nome" required autocomplete="name"></div>
+<div><label for="otica">Nome da ótica</label><input id="otica" name="otica" required></div>
+<div><label for="cidade">Cidade / bairro</label><input id="cidade" name="cidade_bairro" required placeholder="Rio de Janeiro / Tijuca"></div>
+<div><label for="whatsapp">WhatsApp</label><input id="whatsapp" name="whatsapp" type="tel" required placeholder="(21) 99999-9999" autocomplete="tel"></div>
+<div><label for="lojas">Número de lojas</label><select id="lojas" name="numero_lojas" required><option value="">Selecione</option><option>1</option><option>2</option><option>3 ou mais</option></select></div>
+<div><label for="sistema">Sistema que usa hoje</label><select id="sistema" name="sistema_atual" required><option value="">Selecione</option><option>Papel / caderno</option><option>Planilha</option><option>ssOtica</option><option>TekÓtica</option><option>Outro sistema</option><option>Nenhum</option></select></div>
+<div><label><input type="checkbox" id="lgpd" name="lgpd" required style="width:auto"> Li e concordo com a <a href="/privacidade/" target="_blank">Política de Privacidade</a> e autorizo o contato pelo WhatsApp sobre o piloto.</label></div>
+<button class="btn" type="submit">Enviar</button><p id="msg" class="small" role="status"></p></form></section>
+</main>
+<footer>ÓticaZap (nome provisório) · <a href="/privacidade/">Privacidade</a> · <a href="/app-demo/">Protótipo</a></footer>
+<script>
+// Analytics (GoatCounter, sem cookies). PLACEHOLDER: defina GC_CODE com o código de um NOVO site GoatCounter para ativar.
+window.GC_CODE="";
+window.track=function(n){try{if(window.goatcounter&&goatcounter.count)goatcounter.count({path:n,title:n,event:true})}catch(e){}};
+if(window.GC_CODE){var s=document.createElement('script');s.async=1;s.src='//gc.zgo.at/count.js';s.dataset.goatcounter='https://'+GC_CODE+'.goatcounter.com/count';document.head.appendChild(s)}
+const POLICY="versão preliminar 14/10/2026";
+document.getElementById('pilotForm').addEventListener('submit',async e=>{e.preventDefault();const f=e.target,m=document.getElementById('msg');
+if(!f.checkValidity()){m.textContent="Preencha todos os campos e marque o consentimento.";return}
+const d=Object.fromEntries(new FormData(f));d._subject="[Optica] Novo lead piloto — "+d.otica;d._captcha="false";d._template="table";
+d.consentimento_privacidade="Sim — Li e concordo com a Política de Privacidade ("+POLICY+")";d.consentimento_data_hora=new Date().toISOString();delete d.lgpd;
+m.textContent="Enviando…";try{const r=await fetch("https://formsubmit.co/ajax/securedloanpromo@gmail.com",{method:"POST",headers:{"Content-Type":"application/json",Accept:"application/json"},body:JSON.stringify(d)});
+if(!r.ok)throw 0;m.textContent="Obrigado! Vamos falar com você pelo WhatsApp.";f.reset();track('lead')}catch(_){m.textContent="Não foi possível enviar. Tente novamente."}});
+</script></body></html>

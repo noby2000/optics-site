@@ -1,0 +1,7 @@
+name: optics-site
+region: nyc
+static_sites:
+  - name: web
+    github: {repo: noby2000/optics-site, branch: main, deploy_on_push: true}
+    output_dir: /
+    index_document: index.html
