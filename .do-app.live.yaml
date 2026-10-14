@@ -1,0 +1,25 @@
+domains:
+- domain: tecnizap.com
+  type: PRIMARY
+  zone: tecnizap.com
+- domain: www.tecnizap.com
+  type: ALIAS
+  zone: tecnizap.com
+features:
+- buildpack-stack=ubuntu-22
+ingress:
+  rules:
+  - component:
+      name: web
+    match:
+      path:
+        prefix: /
+name: optics-site
+region: nyc
+static_sites:
+- git:
+    branch: main
+    repo_clone_url: https://github.com/noby2000/optics-site.git
+  index_document: index.html
+  name: web
+  output_dir: /
