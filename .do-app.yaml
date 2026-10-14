@@ -2,6 +2,8 @@ name: optics-site
 region: nyc
 static_sites:
   - name: web
-    github: {repo: noby2000/optics-site, branch: main, deploy_on_push: true}
+    git:
+      repo_clone_url: https://github.com/noby2000/optics-site.git
+      branch: main
     output_dir: /
     index_document: index.html
